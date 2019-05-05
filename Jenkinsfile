@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                1..100.each {
+                1..1000.each {it ->
                     echo "${it}: In building ${env.WORKSPACE}."
                 }
             }
