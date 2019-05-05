@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "In building."
+                1..100.each {
+                    echo "${it}: In building ${env.WORKSPACE}."
+                }
             }
         }
         stage('test') {
